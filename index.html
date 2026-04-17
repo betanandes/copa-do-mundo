@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copa do Mundo - Simulador</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <header>
+    <div class="header-content">
+      <h1>⚽ Simulador Copa do Mundo</h1>
+      <p class="subtitle">Processo Seletivo – Estágio Desenvolvimento 2026</p>
+    </div>
+  </header>
+
+  <!-- ÁREA PRINCIPAL -->
+  <main>
+
+    <!-- BOTÃO PARA INICIAR -->
+    <section id="inicio">
+      <button id="btn-iniciar" onclick="iniciarCopa()">
+        🏆 Iniciar Simulação
+      </button>
+    </section>
+
+    <!-- MENSAGEM DE CARREGAMENTO -->
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Buscando seleções da API...</p>
+    </div>
+
+    <!-- MENSAGEM DE ERRO (caso a API falhe) -->
+    <div id="erro" class="hidden">
+      <p>❌ Erro ao buscar dados da API. Tente novamente.</p>
+    </div>
+
+    <!-- FASE DE GRUPOS -->
+    <section id="secao-grupos" class="hidden">
+      <h2>📋 Fase de Grupos</h2>
+      <div id="container-grupos">
+        <!-- Os grupos serão inseridos aqui pelo JavaScript -->
+      </div>
+    </section>
+
+    <!-- RESULTADOS DOS JOGOS DA FASE DE GRUPOS -->
+    <section id="secao-jogos-grupos" class="hidden">
+      <h2>⚽ Resultados da Fase de Grupos</h2>
+      <div id="container-jogos-grupos">
+        <!-- Os jogos serão inseridos aqui pelo JavaScript -->
+      </div>
+    </section>
+
+    <!-- CLASSIFICAÇÃO DE CADA GRUPO -->
+    <section id="secao-classificacao" class="hidden">
+      <h2>📊 Classificação dos Grupos</h2>
+      <div id="container-classificacao">
+        <!-- As tabelas de classificação serão inseridas aqui -->
+      </div>
+    </section>
+
+    <!-- MATA-MATA -->
+    <section id="secao-mata-mata" class="hidden">
+      <h2>🏅 Fase Eliminatória</h2>
+      <div id="container-mata-mata">
+        <!-- Oitavas, Quartas, Semi e Final serão inseridas aqui -->
+      </div>
+    </section>
+
+    <!-- CAMPEÃO -->
+    <section id="secao-campeao" class="hidden">
+      <div id="container-campeao">
+        <!-- O campeão será exibido aqui -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- O script DEVE vir no final do body para garantir que o HTML já carregou -->
+  <script src="script.js"></script>
+</body>
+</html>
