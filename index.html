@@ -3,82 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copa do Mundo - Simulador</title>
+  <title>Copa do Mundo 2026 - Simulador</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  <!-- CABEÇALHO DA PÁGINA -->
   <header>
     <div class="header-content">
-      <h1>⚽ Simulador Copa do Mundo</h1>
-      <p class="subtitle">Processo Seletivo – Estágio Desenvolvimento 2026</p>
+      <i class="fa-solid fa-futbol header-icon"></i>
+      <div>
+        <h1>Simulador Copa do Mundo 2026</h1>
+        <p class="subtitle">Processo Seletivo – Estágio Desenvolvimento 2026</p>
+      </div>
     </div>
   </header>
 
-  <!-- ÁREA PRINCIPAL -->
   <main>
 
-    <!-- BOTÃO PARA INICIAR -->
     <section id="inicio">
-      <button id="btn-iniciar" onclick="iniciarCopa()">
-        🏆 Iniciar Simulação
-      </button>
+      <div class="inicio-card">
+        <i class="fa-solid fa-trophy inicio-icon"></i>
+        <h2>Bem-vindo ao Simulador</h2>
+        <p>Clique abaixo para sortear os grupos, simular todas as fases e descobrir o campeão mundial.</p>
+        <button id="btn-iniciar" onclick="iniciarCopa()">
+          <i class="fa-solid fa-play"></i> Iniciar Simulação
+        </button>
+      </div>
     </section>
 
-    <!-- MENSAGEM DE CARREGAMENTO -->
     <div id="loading" class="hidden">
       <div class="spinner"></div>
       <p>Buscando seleções da API...</p>
     </div>
 
-    <!-- MENSAGEM DE ERRO (caso a API falhe) -->
     <div id="erro" class="hidden">
-      <p>❌ Erro ao buscar dados da API. Tente novamente.</p>
+      <i class="fa-solid fa-circle-exclamation"></i>
+      <p>Erro ao buscar dados da API. Tente novamente.</p>
+      <button onclick="reiniciar()"><i class="fa-solid fa-rotate-left"></i> Voltar</button>
     </div>
 
-    <!-- FASE DE GRUPOS -->
+    <div id="btn-voltar-container" class="hidden">
+      <button id="btn-voltar" onclick="reiniciar()">
+        <i class="fa-solid fa-arrow-left"></i> Nova Simulação
+      </button>
+    </div>
+
     <section id="secao-grupos" class="hidden">
-      <h2>📋 Fase de Grupos</h2>
-      <div id="container-grupos">
-        <!-- Os grupos serão inseridos aqui pelo JavaScript -->
-      </div>
+      <h2><i class="fa-solid fa-layer-group"></i> Fase de Grupos</h2>
+      <div id="container-grupos"></div>
     </section>
 
-    <!-- RESULTADOS DOS JOGOS DA FASE DE GRUPOS -->
     <section id="secao-jogos-grupos" class="hidden">
-      <h2>⚽ Resultados da Fase de Grupos</h2>
-      <div id="container-jogos-grupos">
-        <!-- Os jogos serão inseridos aqui pelo JavaScript -->
-      </div>
+      <h2><i class="fa-solid fa-futbol"></i> Resultados da Fase de Grupos</h2>
+      <div id="container-jogos-grupos"></div>
     </section>
 
-    <!-- CLASSIFICAÇÃO DE CADA GRUPO -->
     <section id="secao-classificacao" class="hidden">
-      <h2>📊 Classificação dos Grupos</h2>
-      <div id="container-classificacao">
-        <!-- As tabelas de classificação serão inseridas aqui -->
-      </div>
+      <h2><i class="fa-solid fa-table-list"></i> Classificação dos Grupos</h2>
+      <div id="container-classificacao"></div>
     </section>
 
-    <!-- MATA-MATA -->
     <section id="secao-mata-mata" class="hidden">
-      <h2>🏅 Fase Eliminatória</h2>
-      <div id="container-mata-mata">
-        <!-- Oitavas, Quartas, Semi e Final serão inseridas aqui -->
-      </div>
+      <h2><i class="fa-solid fa-shield-halved"></i> Fase Eliminatória</h2>
+      <div id="container-mata-mata"></div>
     </section>
 
-    <!-- CAMPEÃO -->
     <section id="secao-campeao" class="hidden">
-      <div id="container-campeao">
-        <!-- O campeão será exibido aqui -->
-      </div>
+      <div id="container-campeao"></div>
     </section>
 
   </main>
 
-  <!-- O script DEVE vir no final do body para garantir que o HTML já carregou -->
   <script src="script.js"></script>
 </body>
 </html>
