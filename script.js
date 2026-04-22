@@ -325,7 +325,7 @@ function simularFaseEliminatoria(confrontos, nomeFase, container) {
     const nomeVencedor = pegarNome(vencedor);
 
     const infoPenaltis = foiPenaltis
-      ? `<div class="info-penaltis"><i class="fa-solid fa-p"></i> Pênaltis: ${nomeA} ${penaltisA}x${penaltisB} ${nomeB}</div>`
+      ? `<div class="info-penaltis"><i class="fa-solid fa-futbol"></i> Pênaltis: ${nomeA} ${penaltisA}x${penaltisB} ${nomeB}</div>`
       : "";
 
     const card = document.createElement("div");

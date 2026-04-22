@@ -488,12 +488,13 @@
 
     .card-jogo-mata .info-penaltis {
     font-size: 0.72rem;
-    color: var(--texto-muted);
-    margin-top: 0.45rem;
+    color: var(--azul-escuroz);
+    margin-top: 0.6rem;
     text-align: center;
     font-style: italic;
-    border-top: 1px solid var(--borda);
-    padding-top: 0.4rem;
+    background: #f4f7fc;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
     }
 
     /* Campeão */
